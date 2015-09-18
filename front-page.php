@@ -20,6 +20,11 @@ $fp_block2_text_content = get_field('fp_block2_text_content');
 $fp_block2_vimeo_video1_id = get_field('fp_block2_vimeo_video1_id');
 $fp_block2_vimeo_video2_id = get_field('fp_block2_vimeo_video2_id');
 
+//FRONTPAGE TESTIMONIALS
+$fb_testimonial_text = get_field('fb_testimonial_text');
+echo '<h1>' . $fb_testimonial_text . '</h1>';
+
+
 ?>
 
 <style type="text/css" media="screen">
@@ -132,90 +137,51 @@ $fp_block2_vimeo_video2_id = get_field('fp_block2_vimeo_video2_id');
   <div class="frontpage-background-block-3">
     
       <div class="row content-row">
+
+      <?php 
+      /**
+       *
+       * Display Service Articles
+       *
+       */
+      $args = array(
+
+          'post_type' => 'services',
+          'posts_per_page' => 4,
+          'orderby' => 'rand'
+      );
+
+      $services = new WP_Query( $args );
+
+
+      ?>
     
           <ul class="frontpage-block-3 medium-block-grid-2 large-block-grid-2">
 
+          <?php while( $services->have_posts() ) : $services->the_post(); ?>
+
             
             <li class="frontpage-content-3 ">
 
-              <h3><a href="#" title="">Article Title</a></h3>
+              <h3><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h3>
               <p>
                 <small>
-                  Posted on <em><a href="#" title="">2 June 2015</a></em> by <a href="#" title="">Da Moose</a> in
-                  <a href="#" title="">Cars</a>, <a href="#" title="">Sports Cars</a>
-                </small></p>
-              <p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. 
+                  <?php get_template_part( 'parts/content', 'byline' ); ?>
+                </small>
               </p>
-              <a href="#" class="button right" title="">Read More</a>
-
-            </li>
-            <li class="frontpage-content-3 ">
-            
-              <h3><a href="#" title="">Article Title</a></h3>
-              <p>
-                <small>
-                  Posted on <em><a href="#" title="">2 June 2015</a></em> by <a href="#" title="">Da Moose</a> in
-                  <a href="#" title="">Cars</a>, <a href="#" title="">Sports Cars</a>
-                </small></p>
               <p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. 
+               <?php the_excerpt(); ?> 
               </p>
-              <a href="#" class="button right" title="">Read More</a>
-
-            </li>
-            <li class="frontpage-content-3 ">
-            
-              <h3><a href="#" title="">Article Title</a></h3>
-              <p>
-                <small>
-                  Posted on <em><a href="#" title="">2 June 2015</a></em> by <a href="#" title="">Da Moose</a> in
-                  <a href="#" title="">Cars</a>, <a href="#" title="">Sports Cars</a>
-                </small></p>
-              <p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. 
-              </p>
-              <a href="#" class="button right" title="">Read More</a>
-
-            </li>
-            <li class="frontpage-content-3 ">
-            
-              <h3><a href="#" title="">Article Title</a></h3>
-              <p>
-                <small>
-                  Posted on <em><a href="#" title="">2 June 2015</a></em> by <a href="#" title="">Da Moose</a> in
-                  <a href="#" title="">Cars</a>, <a href="#" title="">Sports Cars</a>
-                </small></p>
-              <p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. 
-              </p>
-              <a href="#" class="button right" title="">Read More</a>
+              <!-- <a href="#" class="button right" title="">Read More</a> -->
 
             </li>
 
+          <?php endwhile; ?>
+           
           </ul>
 
-
+          <?php wp_reset_query(); ?>
         
       </div> <!-- CONTENT ROW -->
 
@@ -224,23 +190,47 @@ $fp_block2_vimeo_video2_id = get_field('fp_block2_vimeo_video2_id');
   <div class="frontpage-background-block-4">
     
     <div class="row content-row">
+
+     <?php 
+      /**
+       *
+       * Display Service Articles
+       *
+       */
+      $args = array(
+
+          'post_type' => 'testimonials',
+          'posts_per_page' => 4,
+          'orderby' => 'rand'
+      );
+      
+      $testimonials = new WP_Query( $args );
+
+      ?>
     
           <ul class="frontpage-block-4 small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 
+          <?php while( $testimonials->have_posts() ) : $testimonials->the_post(); ?>
+
+
             <li class="frontpage-content-4 large-7 medium-12 columns">
               <p class="text-center">
-                <img class="th" src="http://lorempixel.com/100/100/people/1" alt="">
+                <?php the_post_thumbnail('thumbnail', array( 'class' => 'th' )); ?>
+                <!-- <img class="th" src="http://lorempixel.com/100/100/people/1" alt=""> -->
               <p>
               <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. 
+               <?php the_excerpt(); ?> 
+               
                 <br>
                 <br>
-                <cite>CEO HTMLfiveDev.com </cite>
+                <cite><?php the_title(); ?> </cite>
               </blockquote>
 
             </li>
-            <li class="frontpage-content-4 large-7 medium-12 columns">
+
+          <?php endwhile; ?>
+
+            <!-- <li class="frontpage-content-4 large-7 medium-12 columns">
               <p class="text-center">
                 <img class="th" src="http://lorempixel.com/100/100/people/7" alt="">
               <p>
@@ -278,10 +268,11 @@ $fp_block2_vimeo_video2_id = get_field('fp_block2_vimeo_video2_id');
                 <cite>CEO HTMLfiveDev.com </cite>
               </blockquote>
 
-            </li>
+            </li> -->
             
           </ul>
 
+          <?php wp_reset_query(); ?>
         
     </div> <!-- CONTENT ROW -->
 

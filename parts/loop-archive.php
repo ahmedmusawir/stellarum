@@ -7,10 +7,25 @@
       <div class="large-5 medium-5 columns">
         <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium'); ?></a>
       </div>
+      <div class="blog-index-content large-7 medium-7 columns">
+    
+      <h3>
+        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+      </h3>
 
-    <?php endif; ?>
+      <p>
+        <small class="text-center">
+          <?php get_template_part( 'parts/content', 'byline' ); ?>
+        </small>
+      <p>
+      <?php echo get_the_excerpt(); ?>
 
-    <div class="blog-index-content large-7 medium-7 columns">
+    </div>
+
+    <?php else: ?>
+
+    <div class="blog-index-content large-12 medium-12 columns">
+
       <h3>
         <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
       </h3>
@@ -21,12 +36,10 @@
         </small>
       <p>
       <?php echo get_the_excerpt(); ?>
-      <?php //the_content('<button class="tiny">Read more...</button>'); ?>
-     
-
-      <!-- <a href="<?php //the_permalink() ?>" class="button right" title="">Read More</a> -->
 
     </div>
+
+    <?php endif; ?>
 
   </article>
 <?php endwhile; ?>  

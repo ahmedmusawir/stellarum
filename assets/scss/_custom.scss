@@ -208,7 +208,6 @@ header.frontpage-header {
 
 .frontpage-background-block-2 {
 
-
 	.frontpage-block-2 {
 
 		.flex-video {
@@ -345,8 +344,25 @@ header.frontpage-header {
 			}
 
 			p {
+
+				.excerpt-read-more {
+					border: 1px solid dodgerblue;
+					padding: 1rem 2rem;
+					margin-top: 3rem;
+					float: right;
+					color: dodgerblue;
+
+					@include transition(all .5s ease-in-out);
+
+					&:hover {
+						background-color: darken( dodgerblue, 20% );
+						color: white;
+					}
+					
+				}
+
 				small {
-					font-size: 70%;
+					font-size: 100%;
 					border-bottom: 1px solid lighten( dodgerblue, 20% );
 					padding-bottom: .5rem;
 
@@ -399,7 +415,10 @@ header.frontpage-header {
 			
 
 			blockquote {
-				color: lighten( dodgerblue, 20% );
+				p {
+					color: lighten( dodgerblue, 20% );
+				}
+
 				cite {
 					color: lighten( dodgerblue, 1% );
 
@@ -425,7 +444,7 @@ header.frontpage-header {
 
 		.blog-pagination {
 			background: rgba( darken( dodgerblue, 30% ), .6 );
-			padding-top: 1.5rem;
+			padding-top: .3rem;
 			padding-bottom: 0.1rem;
 			margin-bottom: 2rem;
 
@@ -498,12 +517,17 @@ header.frontpage-header {
 
 		p {
 			small {
-				font-size: 70%;
-				border-bottom: 1px solid lighten( dodgerblue, 20% );
-				padding-bottom: .5rem;
+				font-size: 90%;
+				display: block;
+				// border-bottom: 1px solid lighten( dodgerblue, 20% );
+				background-color: darken( dodgerblue,  30% );
+				// background-color: darken( dodgerblue,  28% );
+				padding: 1rem;
+				text-align: right;
+
 
 				a {
-					color: darken( hotpink, 10% );
+					color: darken( skyblue, 10% );
 
 					&:hover {
 						color: yellow;
@@ -543,12 +567,12 @@ header.frontpage-header {
 
 		p {
 			small {
-				font-size: 70%;
+				font-size: 100%;
 				border-bottom: 1px solid lighten( dodgerblue, 20% );
 				padding-bottom: .5rem;
 
 				a {
-					color: darken( hotpink, 10% );
+					color: darken( skyblue, 10% );
 
 					&:hover {
 						color: yellow;
