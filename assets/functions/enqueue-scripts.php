@@ -16,9 +16,15 @@ function joints_scripts_and_styles() {
     // Adding Foundation scripts file in the footer
    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/min/foundation.min.js', array( 'jquery' ), '', true );
     
+    // Adding imagesloaded
+    wp_enqueue_script( 'site-imageloaded-js', get_template_directory_uri() . '/assets/js/min/imagesloaded.pkgd.min.js', array( 'jquery' ), '', true );
+    
+    // Adding isotope.pkgd.min
+    wp_enqueue_script( 'site-isotope-js', get_template_directory_uri() . '/assets/js/min/isotope.pkgd.min.js', array( 'jquery' ), '', true );
+   
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/min/scripts.js', array( 'jquery' ), '', true );
-   
+    
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all' );
     

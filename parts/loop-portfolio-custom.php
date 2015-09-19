@@ -8,14 +8,21 @@
 
               <?php 
 
-                wp_nav_menu(array(
+                // wp_nav_menu(array(
 
-                  'theme_location' => 'category-menu',
-                  'container' => '',
-                  'menu_class' => 'sub-nav portfolio-filter no-bullets',
-                  'menu_id' => 'portfolio-sorting'
+                //   'theme_location' => 'category-menu',
+                //   'container' => '',
+                //   'menu_class' => 'sub-nav portfolio-filter no-bullets',
+                //   'menu_id' => 'portfolio-sorting'
 
-                ));
+                // ));
+                    wp_nav_menu(array(
+
+                      'theme_location' => 'category-menu',
+                      'menu_class' => 'sub-nav portfolio-filter',
+                      'walker' => new Cat_Walker_Nav_Menu()
+
+                    ));
 
               ?>
 

@@ -41,3 +41,5 @@
 						 <?php get_template_part( 'parts/nav', 'top-offcanvas' ); ?>
 								 	
 					</header> <!-- end .header -->
+
+<main> <!--  START MAIN WRAPPER -->
