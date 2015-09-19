@@ -3,7 +3,8 @@
 register_nav_menus(
 	array(
 		'main-nav' => __( 'The Main Menu', 'jointstheme' ),   // Main nav in header
-		'footer-links' => __( 'Footer Links', 'jointstheme' ) // Secondary nav in footer
+		'footer-links' => __( 'Footer Links', 'jointstheme' ), // Secondary nav in footer
+		'category-menu' => __( 'Category Menu', 'jointstheme' )
 	)
 );
 

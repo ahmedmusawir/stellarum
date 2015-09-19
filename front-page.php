@@ -20,10 +20,9 @@ $fp_block2_text_content = get_field('fp_block2_text_content');
 $fp_block2_vimeo_video1_id = get_field('fp_block2_vimeo_video1_id');
 $fp_block2_vimeo_video2_id = get_field('fp_block2_vimeo_video2_id');
 
-//FRONTPAGE TESTIMONIALS
-$fb_testimonial_text = get_field('fb_testimonial_text');
-echo '<h1>' . $fb_testimonial_text . '</h1>';
-
+//FRONTPAGE LAST BLOCK
+$fp_last_block_title = get_field('fp_last_block_title');
+$fp_last_block_content = get_field('fp_last_block_content');
 
 ?>
 
@@ -290,14 +289,16 @@ echo '<h1>' . $fb_testimonial_text . '</h1>';
               <!-- <a class="" href="#" title=""><img class="img-responsive" src="http://lorempixel.com/640/640/abstract/6" alt=""></a> -->
             </div>
             <div class="frontpage-content-1 large-12 medium-12 columns text-center">
-              <h2>Subscribe Now</h2>
+              <h2><?php echo $fp_last_block_title; ?></h2>
+
+              <?php echo do_shortcode( $fp_last_block_content ); ?>
               
-              <form action="" method="get" accept-charset="utf-8">
+              <!-- <form action="" method="get" accept-charset="utf-8">
 
               <input type="text" name="" value="" placeholder="Your Email">
               <input class="button" type="submit">
                             
-              </form>
+              </form> -->
             </div>
             
 

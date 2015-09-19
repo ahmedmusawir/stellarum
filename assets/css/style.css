@@ -11380,13 +11380,13 @@ header.frontpage-header .frontpage-header-row {
   color: #51a9ff;
 }
 /* line 680, ../scss/_custom.scss */
-.portfolio-block .portfolio-content nav {
+.portfolio-block .portfolio-content .portfolio-content-nav {
   background-color: #3e3e3e;
   padding-top: 1em;
   margin-bottom: 1em;
 }
 /* line 690, ../scss/_custom.scss */
-.portfolio-block .portfolio-content nav dd a:hover {
+.portfolio-block .portfolio-content .portfolio-content-nav dd a:hover {
   color: white;
 }
 /* line 698, ../scss/_custom.scss */

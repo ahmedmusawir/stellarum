@@ -44,8 +44,19 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 // }
 // add_filter( 'excerpt_more', 'new_excerpt_more' );
 
-function theme_name_wp_title( $title, $sep ) {
 
-	return $title;
-}
-add_filter( 'wp_title', 'theme_name_wp_title', 10, 2 );
+
+// MAKE CUSTOM POST TYPE AND IT'S CATEGORY TO SHOW UP USING REGULAR ARCHIVE
+
+// add_filter('pre_get_posts', 'query_post_type');
+// function query_post_type($query) {
+//   if(is_category() || is_tag()) {
+//     $post_type = get_query_var('post_type');
+// 	if($post_type)
+// 	    $post_type = $post_type;
+// 	else
+// 	    $post_type = array('post','portfolio'); 
+//     $query->set('post_type',$post_type);
+// 	return $query;
+//     }
+// }
