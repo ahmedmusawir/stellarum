@@ -35,15 +35,11 @@
 
             foreach ( $categories as $category ) {
 
-
               $class_names[] = 'cat-' . $category->slug;
-
-              // echo "<h4>" .  $category->slug . "</h4>" ;
 
             }
 
             $classes = join( ' ', $class_names );
-            // echo $classes . "<br>"; 
 
             unset( $class_names );
             
@@ -54,12 +50,12 @@
         ?>
       
                 
-      <li class="grid-item all <?php echo $classes; ?> "><a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail('thumbnail', array( 'class' => 'th' )); ?></a></li>
+            <li class="grid-item all <?php echo $classes; ?> "><a href="<?php the_permalink(); ?>" title=""><?php the_post_thumbnail('thumbnail', array( 'class' => 'th' )); ?></a></li>
      
 
       <?php endwhile; ?>  
 
-         </ul>
+        </ul>
      </div>
 
  

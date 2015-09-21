@@ -9,7 +9,7 @@
 	<?php // You can start editing here ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title text-center">
+		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
 					esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', '_jointstheme' ) ),
@@ -56,6 +56,6 @@
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', '_jointstheme' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(array('class_submit'=>'button round')); ?>
+	<?php comment_form(array('class_submit'=>'button')); ?>
 
 </div><!-- #comments -->

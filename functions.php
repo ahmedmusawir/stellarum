@@ -58,7 +58,7 @@ require_once(get_template_directory().'/assets/functions/cat-nav-walker.php');
 // 	if($post_type)
 // 	    $post_type = $post_type;
 // 	else
-// 	    $post_type = array('post','portfolio'); 
+// 	    $post_type = array('post','portfolio', 'nav_menu_item'); 
 //     $query->set('post_type',$post_type);
 // 	return $query;
 //     }
