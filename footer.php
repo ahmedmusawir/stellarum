@@ -8,17 +8,19 @@
 		    					</nav>
 		    				</div>
 							<div class="large-12 medium-12 columns">
-								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+								<p class="text-center source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 							</div>
 						</div> <!-- end #inner-footer -->
 					</footer> <!-- end .footer -->
 
 
-			</main>
-			<!--  END MAIN WRAPPER -->
+		
 				</div> <!-- end #container -->
 			</div> <!-- end .inner-wrap -->
 		</div> <!-- end .off-canvas-wrap -->
 		<?php wp_footer(); ?>
+
+			</main>
+			<!--  END MAIN WRAPPER -->
 	</body>
 </html> <!-- end page -->

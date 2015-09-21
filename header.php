@@ -31,6 +31,9 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+
+<main> <!--  START MAIN WRAPPER -->
+	
 		<div class="off-canvas-wrap" data-offcanvas>
 			<div class="inner-wrap">
 				<div id="container">
@@ -42,4 +45,3 @@
 								 	
 					</header> <!-- end .header -->
 
-<main> <!--  START MAIN WRAPPER -->

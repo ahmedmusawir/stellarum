@@ -4,7 +4,7 @@
 
     <div class="large-12 medium-12 columns">
 
-      <?php the_post_thumbnail('full'); ?>
+      <?php the_post_thumbnail('full-width'); ?>
 
     </div>
     <div class="page-single-content large-12 medium-12 columns">

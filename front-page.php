@@ -214,7 +214,7 @@ $fp_last_block_content = get_field('fp_last_block_content');
 
             <li class="frontpage-content-4 large-7 medium-12 columns">
               <p class="text-center">
-                <?php the_post_thumbnail('thumbnail', array( 'class' => 'th' )); ?>
+                <?php the_post_thumbnail('testimonial', array( 'class' => 'th' )); ?>
                 <!-- <img class="th" src="http://lorempixel.com/100/100/people/1" alt=""> -->
               <p>
               <blockquote>
@@ -229,46 +229,6 @@ $fp_last_block_content = get_field('fp_last_block_content');
 
           <?php endwhile; ?>
 
-            <!-- <li class="frontpage-content-4 large-7 medium-12 columns">
-              <p class="text-center">
-                <img class="th" src="http://lorempixel.com/100/100/people/7" alt="">
-              <p>
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. 
-                <br>
-                <br>
-                <cite>CEO HTMLfiveDev.com </cite>
-              </blockquote>
-
-            </li>
-            <li class="frontpage-content-4 large-7 medium-12 columns">
-              <p class="text-center">
-                <img class="th" src="http://lorempixel.com/100/100/people/8" alt="">
-              <p>
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. 
-                <br>
-                <br>
-                <cite>CEO HTMLfiveDev.com </cite>
-              </blockquote>
-
-            </li>
-            <li class="frontpage-content-4 large-7 medium-12 columns">
-              <p class="text-center">
-                <img class="th" src="http://lorempixel.com/100/100/people/9" alt="">
-              <p>
-              <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. 
-                <br>
-                <br>
-                <cite>CEO HTMLfiveDev.com </cite>
-              </blockquote>
-
-            </li> -->
-            
           </ul>
 
           <?php wp_reset_query(); ?>

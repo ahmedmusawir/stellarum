@@ -2,10 +2,10 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 jQuery(document).ready(function($) {
 	
-		// $(document).foundation();
-		$(document).foundation( 'topbar', 'reflow' );
+		$(document).foundation();
+		// $(document).foundation( 'topbar', 'reflow' );
 
-		$( 'main' ).fadeIn(700);   
+		$( 'body' ).fadeIn(700);   
 
 /**
 *
@@ -17,8 +17,13 @@ jQuery(document).ready(function($) {
 		var $container = $('.portfolio-container').isotope( 
 				{ 
 					itemSelector: '.grid-item',
-					percentPosition: true
-
+					percentPosition: true,
+					layoutMode: 'masonry',
+					animationOptions: {
+		                duration: 1750,
+		                easing: 'linear',
+		                queue: false
+		            }
 
 		} );
 
@@ -43,7 +48,17 @@ jQuery(document).ready(function($) {
 
 			var filterValue = $(this).attr('data-filter');
 
-			$container.isotope( { filter: filterValue });
+			$container.isotope( { 
+
+				filter: filterValue,
+				animationOptions: {
+	                duration: 1750,
+	                easing: 'linear',
+	                queue: false
+	            } 
+
+
+			});
 		});
 
 			

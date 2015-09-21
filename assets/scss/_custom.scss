@@ -1,12 +1,13 @@
 // MY CUSTOM CSS
 body {
 	color: lighten( grey, 30% );
-	 background: url(../images/bg-brick-2.jpg) no-repeat center center fixed; 
+	
+	display: none;
+	 // background: url(../images/bg-brick-2.jpg) no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	
 	// font-family: 'Raleway', sans-serif;
 	// font-weight: 700;
 	// font-family: 'Poiret One', cursive;
@@ -15,7 +16,7 @@ body {
 }
 
 main {
-	display: none;
+	
 }
 
 
@@ -656,7 +657,7 @@ header.frontpage-header {
 
 	img {
 		// padding-top: 1.5rem;
-		@include filter(grayscale(100%));
+		@include filter(grayscale(80%));
 
 		&:hover {
 			@include filter(grayscale(5%));
