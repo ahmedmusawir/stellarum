@@ -8,7 +8,7 @@ function joints_theme_support() {
 	
 	// Default thumbnail size
 	set_post_thumbnail_size(125, 125, true);
-	add_image_size( 'single-post', 700, 400 );
+	add_image_size( 'single-post', 700, 400, true );
 	add_image_size( 'full-width', 1100, 450, true );
 	add_image_size( 'testimonial', 100, 100 );
 	add_image_size( 'about-image', 640, 640 );

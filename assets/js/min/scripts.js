@@ -61,6 +61,13 @@ jQuery(document).ready(function($) {
 			});
 		});
 
+	/**
+	 *
+	 * Stellar js
+	 *
+	 */
+	$.stellar();
+
 			
 });
 

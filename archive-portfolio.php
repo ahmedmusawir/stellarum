@@ -1,10 +1,13 @@
-<?php get_header(); ?>
+<?php get_header(); 
+global $post;
+?>
  
 <header id="header" class="">
 
   <div class="row header-row">
     <div class="large-12 columns">
-      <h1 class="right"><?php the_archive_title();?></h1>
+      <h1 class="right">Portfolio</h1>
+      <h1 class="right"><?php //echo get_the_title();?></h1>
       <!-- <h1 class="right"><?php //echo get_the_title( $ID ); ?> </h1> -->
 
     </div>

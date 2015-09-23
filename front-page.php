@@ -28,18 +28,30 @@ $fp_last_block_content = get_field('fp_last_block_content');
 
 <style type="text/css" media="screen">
 
+
+
   header.frontpage-header {
-      background: url(<?php echo $fp_header_image['url']; ?>) no-repeat center center fixed; 
-      /*background: url(images/frontpage-galaxy-4.jpg) no-repeat center center fixed; */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+  width: 100%;
+  height: 700px;
+  border: 1px dotted black;
+  position: relative;
+
+
+    background: url(<?php echo $fp_header_image['url']; ?>) no-repeat center center fixed; 
+      /*background: url(http://silicon/wp-content/uploads/2015/09/frontpage-galaxy-4.jpg); */
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-repeat:no-repeat;
+    background-position: top left;
   }
 
 </style>
  
-<header id="header-frontpage" class="frontpage-header">
+<header id="header-frontpage" class="frontpage-header" data-stellar-background-ratio=".1">
 
   <div class="row frontpage-header-row">
     <div class="large-12 columns text-center">

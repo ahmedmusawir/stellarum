@@ -4,10 +4,10 @@ body {
 	
 	display: none;
 	 // background: url(../images/bg-brick-2.jpg) no-repeat center center fixed; 
-	  // -webkit-background-size: cover;
-	  // -moz-background-size: cover;
-	  // -o-background-size: cover;
-	  // background-size: cover;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	// font-family: 'Raleway', sans-serif;
 	// font-weight: 700;
 	// font-family: 'Poiret One', cursive;
@@ -75,15 +75,15 @@ a {
 **/
 header.frontpage-header {
 
-	// width: 100%;
-	// height: 700px;
-	// border: 1px dotted black;
+	width: 100%;
+	height: 700px;
+	border: 1px dotted black;
 
 	// background: url(images/frontpage-galaxy-4.jpg) no-repeat center center fixed; 
-	  // -webkit-background-size: cover;
-	  // -moz-background-size: cover;
-	  // -o-background-size: cover;
-	  // background-size: cover;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 
 	a.button {
 		background: transparent;
@@ -876,12 +876,6 @@ header.frontpage-header {
 		padding-left: 1.5rem;
 		padding-right: 1rem;
 		// border: 1px solid red;
-
-		div {
-			p {
-				padding-right: .5rem;
-			}
-		}
 	}
 }
 
